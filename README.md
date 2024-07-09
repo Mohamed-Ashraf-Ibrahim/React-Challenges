@@ -4,5 +4,5 @@ This Repository is a collection of React challenges and exercises aimed at pract
 
 ## Description
 
-The React Challenges project includes various exercises and tasks focusing on different aspects of React, such as state management, component interaction, and handling user input. Each challenge is designed to tackle specific concepts and features commonly used in real-world React applications.
+The React Challenges Repository includes various exercises and tasks focusing on different aspects of React, such as state management, component interaction, and handling user input. Each challenge is designed to tackle specific concepts and features commonly used in real-world React applications.
 
