@@ -27,14 +27,20 @@ export function Board() {
     );
   }
 
+  function handleRest() {
+    setSquares(Array(9).fill(null));
+    setIsXNextPlayer(true);
+    setGameOver(false);
+  }
+
   let winner = calculateWinner(squares);
-  let curPlayer;
+  let status = winner
+    ? `Winner: ${winner}`
+    : `Next Player: ${isXNextPlayer ? "X" : "O"}`;
 
   return (
     <>
-      <div className="status">
-        {curPlayer !== "X" ? `Next Player: ${isXNextPlayer ? "X" : "O"}` : "X"}
-      </div>
+      <div className="status">{status}</div>
       <div className="board-row">
         {renderSquares(0)}
         {renderSquares(1)}
@@ -50,6 +56,9 @@ export function Board() {
         {renderSquares(7)}
         {renderSquares(8)}
       </div>
+      <button className="reset" onClick={handleRest}>
+        Rest Game
+      </button>
     </>
   );
 }
