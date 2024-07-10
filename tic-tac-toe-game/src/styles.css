@@ -49,3 +49,14 @@ h1 {
 .game-info {
   margin-left: 20px;
 }
+
+.reset-btn {
+  margin-top:15px;
+  border:none;
+  padding:12px;
+  background-color:#2990ea;
+  color:#fff;
+  border-radius:5px;
+  font-weight:-semi-bold;
+}
+
