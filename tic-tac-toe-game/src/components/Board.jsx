@@ -8,16 +8,16 @@ export function Board() {
 
   function handleSquareClick(i) {
     if (squares[i] || gameOver) return;
-    const nextSquare = [...squares];
-    nextSquare[i] = isXNextPlayer ? "X" : "O";
-    setSquares(nextSquare);
+    const nextSquares = [...squares];
+    nextSquares[i] = isXNextPlayer ? "X" : "O";
+    setSquares(nextSquares);
     setIsXNextPlayer(!isXNextPlayer);
 
-    let winner = calculateWinner(nextSquare);
-    if (winner) return setGameOver(true);
+    let winner = calculateWinner(nextSquares);
+    if (winner) setGameOver(true);
   }
 
-  function renderSquares(i) {
+  function renderSquare(i) {
     return (
       <Square
         value={squares[i]}
@@ -27,7 +27,7 @@ export function Board() {
     );
   }
 
-  function handleRest() {
+  function handleReset() {
     setSquares(Array(9).fill(null));
     setIsXNextPlayer(true);
     setGameOver(false);
@@ -36,28 +36,30 @@ export function Board() {
   let winner = calculateWinner(squares);
   let status = winner
     ? `Winner: ${winner}`
+    : !squares.includes(null)
+    ? "Draw!"
     : `Next Player: ${isXNextPlayer ? "X" : "O"}`;
 
   return (
     <>
       <div className="status">{status}</div>
       <div className="board-row">
-        {renderSquares(0)}
-        {renderSquares(1)}
-        {renderSquares(2)}
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
       </div>
       <div className="board-row">
-        {renderSquares(3)}
-        {renderSquares(4)}
-        {renderSquares(5)}
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
       </div>
       <div className="board-row">
-        {renderSquares(6)}
-        {renderSquares(7)}
-        {renderSquares(8)}
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
       </div>
-      <button className="reset" onClick={handleRest}>
-        Rest Game
+      <button className="reset-btn" onClick={handleReset}>
+        Reset Game
       </button>
     </>
   );
