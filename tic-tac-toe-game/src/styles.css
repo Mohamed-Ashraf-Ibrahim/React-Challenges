@@ -58,5 +58,10 @@ h1 {
   color:#fff;
   border-radius:5px;
   font-weight:-semi-bold;
+  transition:0.3s;
+}
+
+.reset-btn:hover{
+  background: #2980ea
 }
 
