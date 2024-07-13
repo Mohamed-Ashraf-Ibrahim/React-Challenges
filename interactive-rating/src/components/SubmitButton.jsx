@@ -1,4 +1,4 @@
-export function SubmitButton({ showModal, onShow}) {
+export function SubmitButton({onShow}) {
   return (
     <button className="sub" id="submit" onClick={onShow}>
       Submit

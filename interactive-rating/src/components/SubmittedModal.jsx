@@ -4,7 +4,7 @@ import ThankYou from "../assets/illustration-thank-you.svg";
 export default function SubmittedModal({ rate, onRate }) {
   return (
     <div className="submitted">
-      <img src={ThankYou} alt="thank you image" />
+      <img src={ThankYou} alt="Thank You" />
       <p className="selected">
         You selected out <span>{rate}</span> of 5
       </p>
