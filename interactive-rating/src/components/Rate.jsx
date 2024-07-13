@@ -1,12 +1,11 @@
-
 export function Rate({ number, onRate, selected }) {
   return (
     <div>
       <ul>
         <li>
-          {<button className={selected ? "selected" : "btn"} onClick={onRate}>
+          <button className={selected ? "selected" : "btn"} onClick={onRate}>
             {number}
-          </button>}
+          </button>
         </li>
       </ul>
     </div>

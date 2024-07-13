@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { Rate } from "./Rate";
+import { SubmitButton } from "./SubmitButton";
 
-export function Ratings() {
-  const [selected, setSelected] = useState(Array(5).fill(false));
-
-  function handleRating(rating) {
-    const updatedSelected = selected.map((_, i) => i === rating);
-    setSelected(updatedSelected);
-  }
+export function Ratings({ selected, onRate, showModal, onShow }) {
+  // Solution with useEffect Hook
+  // useEffect(() => {
+  //   // Find the selected rating
+  //   const selectedRating = selected.findIndex((rate) => rate) + 1;
+  //   setRate(selectedRating);
+  // }, [selected]); // Run this effect whenever 'selected' changed
 
   return (
     <>
@@ -16,12 +16,14 @@ export function Ratings() {
           <Rate
             key={i}
             number={i + 1}
-            onRate={() => handleRating(i)}
+            onRate={() => onRate(i)}
             selected={selected[i]}
           />
         ))}
       </div>
-      <p>{selected.findIndex((rate) => rate) + 1}</p>
+      {/* {selected ? <SubmittedModal rate={rate} /> : null} */}
+      <SubmitButton showModal={showModal} onShow={onShow} />
+      {/* {showModal ? <SubmittedModal rate={rate} /> : null} */}
     </>
   );
 }

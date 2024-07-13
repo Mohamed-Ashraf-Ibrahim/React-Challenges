@@ -1,6 +1,6 @@
-export function SubmitButton() {
+export function SubmitButton({ showModal, onShow}) {
   return (
-    <button type="submit" className="sub" id="submit">
+    <button className="sub" id="submit" onClick={onShow}>
       Submit
     </button>
   );
