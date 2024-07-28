@@ -13,11 +13,9 @@ export function FormSplitBill({ selectedFriend, onSplitBill }) {
     if (!bill || !paidByUser) return;
 
     onSplitBill(whoIsPaying === "user" ? paidByFriend : -paidByUser);
-
-    
   }
 
-  return (  
+  return (
     <form className="form-split-bill" onSubmit={handleSubmit}>
       <h2>Split Bill with {selectedFriend.name}</h2>
       <label>💰 Bill Value</label>

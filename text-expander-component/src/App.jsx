@@ -22,7 +22,7 @@ export default function App() {
         collaboration between countries, private companies, and international
         space organizations. And while it's not always easy (or cheap), the
         results are out of this world. Think about the first time humans stepped
-        foot on the moon or when rovers were sent to roam around on Mars.
+        foot on the moon or when rovers were sent to roam around on Mars.==
       </TextExpander>
 
       <TextExpander expanded={true} className="box">
@@ -57,6 +57,8 @@ function TextExpander({
     marginLeft: "10px",
     font: "10px",
   };
+
+
   return (
     <div className={className}>
       <span>{displayText}</span>
