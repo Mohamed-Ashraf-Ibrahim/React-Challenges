@@ -1,0 +1,49 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.get-position-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.get-position-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  color: #ff9900;
+}
+
+.error {
+  color: red;
+}
+
+.position {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.position-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.position-link:hover {
+  text-decoration: underline;
+}
+
+.click-count {
+  margin-top: 20px;
+  font-weight: bold;
+}
